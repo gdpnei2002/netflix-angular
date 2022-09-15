@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   // title = 'netflix';
 
+  menuOpened = false;
+
   listTitles=[{
     trailer: 'assets/videos/trailer_guardioes_da_galaxia_1080p.mp4',
     cover: 'assets/images/guardios-da-galaxia.jpg',
@@ -35,4 +37,12 @@ export class AppComponent {
     parts: 2,
     categories:['Épico', 'Filme de fantasia', 'Viagem no espaço']
   }]
+
+  setMenuState(state: boolean){
+    this.menuOpened = state;
+  }
+
+  closeMenu(){
+    this.menuOpened = false;
+  }
 }
